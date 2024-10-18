@@ -1,0 +1,105 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-image: url('img/neuro.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 10);
+}
+
+.input-container {
+    background-color: white;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 10);
+    margin-top: 20px;
+}
+
+.title {
+    font-size: 5em;
+    color: white;
+    text-shadow: 10px 10px 25px rgba(10, 10, 10, 50);
+    margin-bottom: 30px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.button {
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid black;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.button.active {
+
+    background-color: lime; border-color: lime;
+    
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.performance {
+    display: none;
+}
+
+.export-container {
+    margin-top: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .title {
+        font-size: 3em;
+    }
+
+    .button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .input-container {
+        padding: 5px;
+    }
+
+    .row {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
