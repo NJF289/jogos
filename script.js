@@ -68,30 +68,6 @@ function checkPlayerMove(index) {
         resetGame();
     }
 }
-sendGameData(playerName, round); // Chamada para enviar os dados
-
-
-// Função para enviar dados para a API
-async function sendGameData(playerName, round) {
-    try {
-        const response = await fetch('/api/saveGame', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ playerName, round }),
-        });
-
-        if (!response.ok) {
-            throw new Error('Erro ao salvar dados');
-        }
-
-        const data = await response.json();
-        console.log(data.message);
-    } catch (error) {
-        console.error('Erro ao enviar dados:', error);
-    }
-}
 
 function updatePerformanceTable() {
     const tableBody = document.getElementById('performanceTable').querySelector('tbody');
